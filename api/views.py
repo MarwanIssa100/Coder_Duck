@@ -30,10 +30,10 @@ class BlogList(generics.ListCreateAPIView):
 #     serializer_class = UserProfileSerializer
 
 class UserProfileView(APIView):
+    permission_classes = [IsAuthenticated]
     def get(self, request, *args, **kwargs):
         user_profile = UserProfile.objects.get(user=request.user)
         serializer = UserProfileSerializer(user_profile)
-        permission_classes = [IsAuthenticated]
         return Response(serializer.data)
     
     
