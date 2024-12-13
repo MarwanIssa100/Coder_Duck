@@ -6,3 +6,6 @@
 
 #### api page
 !['BlogAPIScreenshot'](images/sc.png "image")
+
+
+<img src="images/sc.png" alt="Homepage Screenshot" width="500" />
